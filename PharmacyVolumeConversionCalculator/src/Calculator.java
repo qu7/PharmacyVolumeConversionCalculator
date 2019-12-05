@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.text.*;
 
 public class Calculator {
 	static double ccs;
@@ -18,11 +19,13 @@ public class Calculator {
 	static String strLtrs;
 	static String strGals;
 
-	public static void calculations(double valueD, int units) {
+	public static void calculations(double valueD, double units) {
 		//"CCs", "MLs", "Teaspoons", "Tablespoons", "Ounces", "Pints", "Liters", "Gallons"
-		int uom = units;
+		double uom = units;
 		double value = valueD;
 		double toMLs = 0;
+
+		DecimalFormat df = new DecimalFormat("#.###");
 		
 		if (uom == 0) {
 			toMLs = value;
@@ -64,14 +67,14 @@ public class Calculator {
 		pints = toMLs / 480;
 		ltrs = toMLs / 1000;
 		gals= toMLs / 3785;
-		strCCs = String.valueOf(ccs);
-		strMLs = String.valueOf(mls);
-		strTspn = String.valueOf(tspn);
-		strTblspn = String.valueOf(tblspn);
-		strOz = String.valueOf(oz);
-		strPints = String.valueOf(pints);
-		strLtrs = String.valueOf(ltrs);
-		strGals = String.valueOf(gals);
+		strCCs = String.valueOf(df.format(ccs));
+		strMLs = String.valueOf(df.format(mls));
+		strTspn = String.valueOf(df.format(tspn));
+		strTblspn = String.valueOf(df.format(tblspn));
+		strOz = String.valueOf(df.format(oz));
+		strPints = String.valueOf(df.format(pints));
+		strLtrs = String.valueOf(df.format(ltrs));
+		strGals = String.valueOf(df.format(gals));
 	}
 
 }
