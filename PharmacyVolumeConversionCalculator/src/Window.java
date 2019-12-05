@@ -72,6 +72,7 @@ public class Window extends JFrame {
 		btnConvert.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				final String value = txtStartValue.getText();
+				
 				final double valueD = Double.valueOf(value);
 				final int units = cmboUnitsOfMeasurement.getSelectedIndex();
 				Calculator.calculations(valueD, units);
