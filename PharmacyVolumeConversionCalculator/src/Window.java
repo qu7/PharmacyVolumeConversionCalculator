@@ -7,14 +7,19 @@ import javax.swing.JButton;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.event.ActionListener;
+import java.text.DecimalFormat;
 import java.awt.event.ActionEvent;
 import javax.swing.JComboBox;
+import java.text.*;
 
 public class Window extends JFrame {
+	
+	private static final long serialVersionUID = 1L;
 	private JTextField txtStartValue;
 	public Window() {
 		String unitOfMeasurement[] = {"CCs", "MLs", "Teaspoons", "Tablespoons", "Ounces", "Pints", "Liters", "Gallons"};
-		
+	
+
 		getContentPane().setLayout(null);
 		
 		txtStartValue = new JTextField();
@@ -26,7 +31,7 @@ public class Window extends JFrame {
 		cmboUnitsOfMeasurement.setBounds(106, 37, 139, 20);
 		getContentPane().add(cmboUnitsOfMeasurement);
 		
-		JLabel lblIsEqualTo = new JLabel("is equal to:");
+		JLabel lblIsEqualTo = new JLabel("is equal to: ");
 		lblIsEqualTo.setFont(new Font("Tahoma", Font.BOLD, 11));
 		lblIsEqualTo.setBounds(43, 67, 76, 14);
 		getContentPane().add(lblIsEqualTo);
@@ -73,7 +78,7 @@ public class Window extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				final String value = txtStartValue.getText();
 				final double valueD = Double.valueOf(value);
-				final int units = cmboUnitsOfMeasurement.getSelectedIndex();
+				final double units = cmboUnitsOfMeasurement.getSelectedIndex();
 				Calculator.calculations(valueD, units);
 				lblCCs.setText(Calculator.strCCs);
 				lblMLs.setText(Calculator.strMLs);
