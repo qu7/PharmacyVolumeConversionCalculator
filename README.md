@@ -1,2 +1,2 @@
 # PharmacyVolumeConversionCalculator
-Converts between different volume conversions commonly used in pharmacy setting
+Converts between different volume units commonly used in pharmacy setting
