@@ -74,7 +74,7 @@ public class Window extends JFrame {
 				final String value = txtStartValue.getText();
 				
 				final double valueD = Double.valueOf(value);
-				final int units = cmboUnitsOfMeasurement.getSelectedIndex();
+				final double units = cmboUnitsOfMeasurement.getSelectedIndex();
 				Calculator.calculations(valueD, units);
 				lblCCs.setText(Calculator.strCCs + " CCs");
 				lblMLs.setText(Calculator.strMLs + " MLs");
