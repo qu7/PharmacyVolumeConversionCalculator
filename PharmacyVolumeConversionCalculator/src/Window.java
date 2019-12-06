@@ -7,19 +7,14 @@ import javax.swing.JButton;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.event.ActionListener;
-import java.text.DecimalFormat;
 import java.awt.event.ActionEvent;
 import javax.swing.JComboBox;
-import java.text.*;
 
 public class Window extends JFrame {
-	
-	private static final long serialVersionUID = 1L;
 	private JTextField txtStartValue;
 	public Window() {
 		String unitOfMeasurement[] = {"CCs", "MLs", "Teaspoons", "Tablespoons", "Ounces", "Pints", "Liters", "Gallons"};
-	
-
+		
 		getContentPane().setLayout(null);
 		
 		txtStartValue = new JTextField();
@@ -31,7 +26,7 @@ public class Window extends JFrame {
 		cmboUnitsOfMeasurement.setBounds(106, 37, 139, 20);
 		getContentPane().add(cmboUnitsOfMeasurement);
 		
-		JLabel lblIsEqualTo = new JLabel("is equal to: ");
+		JLabel lblIsEqualTo = new JLabel("is equal to:");
 		lblIsEqualTo.setFont(new Font("Tahoma", Font.BOLD, 11));
 		lblIsEqualTo.setBounds(43, 67, 76, 14);
 		getContentPane().add(lblIsEqualTo);
@@ -77,17 +72,18 @@ public class Window extends JFrame {
 		btnConvert.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				final String value = txtStartValue.getText();
+				
 				final double valueD = Double.valueOf(value);
-				final double units = cmboUnitsOfMeasurement.getSelectedIndex();
+				final int units = cmboUnitsOfMeasurement.getSelectedIndex();
 				Calculator.calculations(valueD, units);
-				lblCCs.setText(Calculator.strCCs);
-				lblMLs.setText(Calculator.strMLs);
-				lblTspn.setText(Calculator.strTspn);
-				lblTblspn.setText(Calculator.strTblspn);
-				lblOz.setText(Calculator.strOz);
-				lblPt.setText(Calculator.strPints);
-				lblLtrs.setText(Calculator.strLtrs);
-				lblGal.setText(Calculator.strGals);
+				lblCCs.setText(Calculator.strCCs + " CCs");
+				lblMLs.setText(Calculator.strMLs + " MLs");
+				lblTspn.setText(Calculator.strTspn + " TSPNs");
+				lblTblspn.setText(Calculator.strTblspn + " TBLSPNs");
+				lblOz.setText(Calculator.strOz + " Oz");
+				lblPt.setText(Calculator.strPints + " Pints");
+				lblLtrs.setText(Calculator.strLtrs + " Liters");
+				lblGal.setText(Calculator.strGals + " Gallons");
 			}
 		});
 		btnConvert.setForeground(new Color(47, 79, 79));
