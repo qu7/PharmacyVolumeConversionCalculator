@@ -3,14 +3,14 @@ import java.util.Scanner;
 import java.text.*;
 
 public class Calculator {
-	static float ccs;
-	static float mls;
-	static float tspn;
-	static float tblspn;
-	static float oz;
-	static float pints;
-	static float ltrs;
-	static float gals;
+	static double ccs;
+	static double mls;
+	static double tspn;
+	static double tblspn;
+	static double oz;
+	static double pints;
+	static double ltrs;
+	static double gals;
 	static String strCCs;
 	static String strMLs;
 	static String strTspn;
@@ -38,27 +38,27 @@ public class Calculator {
 		}
 		
 		else if (uom == 2) {
-			toMLs = value/5;
+			toMLs = value*5;
 		}
 		
 		else if (uom == 3) {
-			toMLs = value/15;
+			toMLs = value*15;
 		}
 		
 		else if (uom == 4) {
-			toMLs = value/30;
+			toMLs = value*30;
 		}
 		
 		else if (uom == 5) {
-			toMLs = value/480;
+			toMLs = value*480;
 		}
 		
 		else if (uom == 6) {
-			toMLs = value/1000;
+			toMLs = value*1000;
 		}
 		
 		else if (uom == 7) {
-			toMLs = value/3785;
+			toMLs = value*3785;
 		}
 		
 		else {
@@ -66,7 +66,7 @@ public class Calculator {
 		}
 		
 		System.out.println(df.format(toMLs));
-		ccs = toMLs;
+		ccs = (float) toMLs;
 		mls = toMLs;
 		tspn = toMLs / 5;
 		tblspn = toMLs / 15;
