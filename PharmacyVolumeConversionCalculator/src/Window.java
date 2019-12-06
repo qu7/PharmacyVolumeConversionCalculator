@@ -27,7 +27,7 @@ public class Window extends JFrame {
 		getContentPane().add(txtStartValue);
 		txtStartValue.setColumns(10);
 
-		JComboBox cmboUnitsOfMeasurement = new JComboBox(unitOfMeasurement);
+		final JComboBox cmboUnitsOfMeasurement = new JComboBox(unitOfMeasurement);
 		cmboUnitsOfMeasurement.setBounds(106, 37, 139, 20);
 		getContentPane().add(cmboUnitsOfMeasurement);
 		
@@ -36,31 +36,31 @@ public class Window extends JFrame {
 		lblIsEqualTo.setBounds(43, 67, 76, 14);
 		getContentPane().add(lblIsEqualTo);
 		
-		JLabel lblCCs = new JLabel("ccs");
+		final JLabel lblCCs = new JLabel("ccs");
 		lblCCs.setBounds(10, 92, 109, 14);
 		getContentPane().add(lblCCs);
 		
-		JLabel lblMLs = new JLabel("mls");
+		final JLabel lblMLs = new JLabel("mls");
 		lblMLs.setBounds(129, 92, 109, 14);
 		getContentPane().add(lblMLs);
 		
-		JLabel lblTblspn = new JLabel("tblspns");
+		final JLabel lblTblspn = new JLabel("tblspns");
 		lblTblspn.setBounds(129, 117, 109, 14);
 		getContentPane().add(lblTblspn);
 		
-		JLabel lblTspn = new JLabel("tspns");
+		final JLabel lblTspn = new JLabel("tspns");
 		lblTspn.setBounds(10, 117, 109, 14);
 		getContentPane().add(lblTspn);
 		
-		JLabel lblGal = new JLabel("gals");
+		final JLabel lblGal = new JLabel("gals");
 		lblGal.setBounds(129, 167, 109, 14);
 		getContentPane().add(lblGal);
 		
-		JLabel lblPt = new JLabel("pts");
+		final JLabel lblPt = new JLabel("pts");
 		lblPt.setBounds(129, 142, 109, 14);
 		getContentPane().add(lblPt);
 		
-		JLabel lblOz = new JLabel("ozs");
+		final JLabel lblOz = new JLabel("ozs");
 		lblOz.setBounds(10, 142, 109, 14);
 		getContentPane().add(lblOz);
 		
@@ -69,7 +69,7 @@ public class Window extends JFrame {
 		lblTitle.setBounds(10, 11, 287, 14);
 		getContentPane().add(lblTitle);
 		
-		JLabel lblLtrs = new JLabel("ltrs");
+		final JLabel lblLtrs = new JLabel("ltrs");
 		lblLtrs.setBounds(10, 167, 109, 14);
 		getContentPane().add(lblLtrs);
 		
