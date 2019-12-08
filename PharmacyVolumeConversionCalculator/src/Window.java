@@ -105,6 +105,7 @@ public class Window extends JFrame {
 	
 	public static void main(String args[]) {
 		Window window = new Window();
+		window.setTitle("Pharmacy Volume Conversion Calculator");
 		window.setSize(new Dimension(450, 300));
 		window.setVisible(true);
 	}
